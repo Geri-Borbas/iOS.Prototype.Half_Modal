@@ -2,37 +2,50 @@
 //  ModalViewController.swift
 //  Half Modal
 //
-//  Created by Geri Borbás on 30/03/2022.
+//  Created by Geri Borbás on 31/03/2022.
 //
 
 import UIKit
 
 
 class ModalViewController: UIViewController {
-	
-	lazy var emptyView = UIView().with {
-		$0.backgroundColor = UIColor.clear
-	}
-	
-	lazy var contentView = UIView()
-		.with {
-			$0.backgroundColor = UIColor.white
-			$0.layer.maskedCorners = [ .layerMinXMinYCorner, .layerMaxXMinYCorner ]
-			$0.layer.cornerRadius = 25
-		}
-	
-	lazy var body = UIStackView()
-		.vertical(spacing: 10)
-		.views(
-			emptyView,
-			contentView
-		)
-	
+		
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		let hole = UIView()
+		hole.backgroundColor = UIColor.clear
+		
+		let content = UIView()
+		content.backgroundColor = UIColor.white
+		content.layer.maskedCorners = [ .layerMinXMinYCorner, .layerMaxXMinYCorner ]
+		content.layer.cornerRadius = 142 / 3
+		
+		let bar = UIView()
+		bar.backgroundColor = UIColor.lightGray
+		bar.layer.cornerRadius = 5 / 2
+		content.addSubview(bar)
+		
+		let body = UIStackView()
+		body.axis = .vertical
+		body.addArrangedSubview(hole)
+		body.addArrangedSubview(content)
 		view.addSubview(body)
-		body.pin(to: view, insets: .zero)
-		contentView.set(height: 400)
+		
+		bar.translatesAutoresizingMaskIntoConstraints = false
+		bar.topAnchor.constraint(equalTo: content.topAnchor, constant: 8).isActive = true
+		bar.centerXAnchor.constraint(equalTo: content.centerXAnchor, constant: 0).isActive = true
+		bar.widthAnchor.constraint(equalToConstant: 60).isActive = true
+		bar.heightAnchor.constraint(equalToConstant: 5).isActive = true
+		
+		content.translatesAutoresizingMaskIntoConstraints = false
+		content.heightAnchor.constraint(equalToConstant: 400).isActive = true
+		
+		body.translatesAutoresizingMaskIntoConstraints = false
+		body.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+		body.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+		body.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+		body.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
 	}
 	
 	override func viewDidLayoutSubviews() {

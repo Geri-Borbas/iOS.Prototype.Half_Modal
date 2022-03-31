@@ -24,14 +24,16 @@ class MenuViewController: UIViewController {
 			UIView
 				.spacer
 		)
+		.withConstraints {
+			$0.pin(
+				to: self.view.safeAreaLayoutGuide,
+				insets: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+			)
+		}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		view.addSubview(body)
 		view.backgroundColor = .systemBackground
-		body.pin(
-			to: view.safeAreaLayoutGuide,
-			insets: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-		)
     }
 }

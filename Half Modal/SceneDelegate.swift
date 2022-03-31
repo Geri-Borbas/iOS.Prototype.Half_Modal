@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			if let windowScene = scene as? UIWindowScene {
 				let window = UIWindow(windowScene: windowScene)
 				window.rootViewController = MenuViewController()
+				window.layer.speed = UIWindow.speed
 				self.window = window
 				window.makeKeyAndVisible()
 			}

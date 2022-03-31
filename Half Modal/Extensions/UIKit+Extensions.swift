@@ -17,7 +17,7 @@ extension UIView {
 		}
 	}
 	
-	func pin(to: UILayoutGuide, insets: UIEdgeInsets)  {
+	func pin(to: UILayoutGuide, insets: UIEdgeInsets = .zero)  {
 		guard let _ = superview else {
 			return
 		}
@@ -29,7 +29,7 @@ extension UIView {
 		rightAnchor.constraint(equalTo: to.rightAnchor, constant: -insets.right).isActive = true
 	}
 	
-	func pin(to: UIView, insets: UIEdgeInsets)  {
+	func pin(to: UIView, insets: UIEdgeInsets = .zero)  {
 		guard let _ = superview else {
 			return
 		}
@@ -41,8 +41,32 @@ extension UIView {
 		rightAnchor.constraint(equalTo: to.rightAnchor, constant: -insets.right).isActive = true
 	}
 	
-	func set(height: CGFloat) {
-		heightAnchor.constraint(equalToConstant: height).isActive = true
+	@discardableResult func top(to: UIView, inset: CGFloat = 0) -> NSLayoutConstraint {
+		translatesAutoresizingMaskIntoConstraints = false
+		return topAnchor.constraint(equalTo: to.topAnchor, constant: inset).with {
+			$0.isActive = true
+		}
+	}
+	
+	func centerX(to: UIView, inset: CGFloat = 0)  {
+		guard let _ = superview else {
+			return
+		}
+		
+		translatesAutoresizingMaskIntoConstraints = false
+		centerXAnchor.constraint(equalTo: to.centerXAnchor, constant: inset).isActive = true
+	}
+	
+	@discardableResult func set(height: CGFloat) -> NSLayoutConstraint {
+		heightAnchor.constraint(equalToConstant: height).with {
+			$0.isActive = true
+		}
+	}
+	
+	@discardableResult func set(width: CGFloat) -> NSLayoutConstraint {
+		widthAnchor.constraint(equalToConstant: width).with {
+			$0.isActive = true
+		}
 	}
 	
 	var withRedLines: Self {

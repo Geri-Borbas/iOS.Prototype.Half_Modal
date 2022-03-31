@@ -1,18 +1,16 @@
-#  Half modal
+# Half modal
 
-Simplest half modal: a modal in half. 😆
-
-> For iOS 15+ you should just use [`UISheetPresentationController`](https://developer.apple.com/documentation/uikit/uisheetpresentationcontroller).
+**Simplest half modal.** Get pan gestures and transitions for free by simply punching a hole in a standard modal sheet.
 
 ## How it works
 
-By adding a transparent view to the upper half of a modal, you can get a half modal with all the **transitions and the pan gesture for free.**
+By adding a transparent view to the upper half of a modal, you can get a half modal with all the **transitions and the pan gesture for free.** See [`ModalViewController.swift`](Half Modal/Views/ModalViewController.swift) for details.
 
-> The project uses a couple of convinience extension from [Declarative UIKit with 10 lines of code](http://blog.eppz.eu/declarative-uikit-with-10-lines-of-code/), but it is entirely optional.
+> For iOS 15+ you should just use [`UISheetPresentationController`](https://developer.apple.com/documentation/uikit/uisheetpresentationcontroller).
 
 ## Hide shadow
 
-To get rid the shadow of the original modal view, you can resolve the next `UIDropShadowView` in the hierarchy, and set its `shadowColor` to `.clear`.
+To get rid the shadow of the original modal view, you can resolve the next `UIDropShadowView` in the hierarchy, and set its `shadowColor` to `.clear`. See [`UIView+DropShadowView.swift`](Half Modal/Views/UIView+DropShadowView.swift) for details
 
 ```Swift
 view.dropShadowView?.layer.shadowColor = UIColor.clear.cgColor

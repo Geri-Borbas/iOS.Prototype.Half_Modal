@@ -12,12 +12,15 @@
 		557FFD9727F4C48600825447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557FFD9627F4C48600825447 /* Assets.xcassets */; };
 		557FFD9A27F4C48600825447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557FFD9827F4C48600825447 /* LaunchScreen.storyboard */; };
 		557FFDA227F4C50200825447 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDA127F4C50100825447 /* MenuViewController.swift */; };
-		557FFDA427F4C50B00825447 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDA327F4C50B00825447 /* ModalViewController.swift */; };
+		557FFDA427F4C50B00825447 /* DeclarativeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDA327F4C50B00825447 /* DeclarativeModalViewController.swift */; };
 		557FFDAA27F4C55E00825447 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDA727F4C55E00825447 /* UIKit+Extensions.swift */; };
 		557FFDAB27F4C55E00825447 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDA827F4C55E00825447 /* Withable.swift */; };
 		557FFDAD27F4C58D00825447 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDAC27F4C58D00825447 /* UIButton+Extensions.swift */; };
 		557FFDAF27F4C5C800825447 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDAE27F4C5C800825447 /* UIButton+Styles.swift */; };
 		557FFDB227F4CDCF00825447 /* UIView+DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FFDB127F4CDCC00825447 /* UIView+DropShadowView.swift */; };
+		55AF352227F60C8A00DFD1BD /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF352127F60C8800DFD1BD /* UIView+Constraints.swift */; };
+		55AF352427F617A000DFD1BD /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF352327F6179F00DFD1BD /* AnimationViewController.swift */; };
+		55AF352627F6311900DFD1BD /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF352527F6311800DFD1BD /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +31,16 @@
 		557FFD9927F4C48600825447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		557FFD9B27F4C48600825447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557FFDA127F4C50100825447 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		557FFDA327F4C50B00825447 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		557FFDA327F4C50B00825447 /* DeclarativeModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeModalViewController.swift; sourceTree = "<group>"; };
 		557FFDA727F4C55E00825447 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		557FFDA827F4C55E00825447 /* Withable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
 		557FFDAC27F4C58D00825447 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		557FFDAE27F4C5C800825447 /* UIButton+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		557FFDB127F4CDCC00825447 /* UIView+DropShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadowView.swift"; sourceTree = "<group>"; };
 		557FFDB327F4D93900825447 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55AF352127F60C8800DFD1BD /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		55AF352327F6179F00DFD1BD /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		55AF352527F6311800DFD1BD /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				557FFDA727F4C55E00825447 /* UIKit+Extensions.swift */,
+				55AF352127F60C8800DFD1BD /* UIView+Constraints.swift */,
 				557FFDAC27F4C58D00825447 /* UIButton+Extensions.swift */,
 				557FFDAE27F4C5C800825447 /* UIButton+Styles.swift */,
 				557FFDA827F4C55E00825447 /* Withable.swift */,
@@ -94,10 +101,20 @@
 			isa = PBXGroup;
 			children = (
 				557FFDA127F4C50100825447 /* MenuViewController.swift */,
-				557FFDA327F4C50B00825447 /* ModalViewController.swift */,
+				55AF352527F6311800DFD1BD /* ModalViewController.swift */,
 				557FFDB127F4CDCC00825447 /* UIView+DropShadowView.swift */,
+				55AF352727F6352400DFD1BD /* Extras */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		55AF352727F6352400DFD1BD /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				557FFDA327F4C50B00825447 /* DeclarativeModalViewController.swift */,
+				55AF352327F6179F00DFD1BD /* AnimationViewController.swift */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +189,14 @@
 			files = (
 				557FFDAA27F4C55E00825447 /* UIKit+Extensions.swift in Sources */,
 				557FFDAB27F4C55E00825447 /* Withable.swift in Sources */,
+				55AF352427F617A000DFD1BD /* AnimationViewController.swift in Sources */,
 				557FFDAD27F4C58D00825447 /* UIButton+Extensions.swift in Sources */,
 				557FFD8E27F4C47F00825447 /* AppDelegate.swift in Sources */,
 				557FFD9027F4C47F00825447 /* SceneDelegate.swift in Sources */,
-				557FFDA427F4C50B00825447 /* ModalViewController.swift in Sources */,
+				55AF352627F6311900DFD1BD /* ModalViewController.swift in Sources */,
+				557FFDA427F4C50B00825447 /* DeclarativeModalViewController.swift in Sources */,
 				557FFDA227F4C50200825447 /* MenuViewController.swift in Sources */,
+				55AF352227F60C8A00DFD1BD /* UIView+Constraints.swift in Sources */,
 				557FFDB227F4CDCF00825447 /* UIView+DropShadowView.swift in Sources */,
 				557FFDAF27F4C5C800825447 /* UIButton+Styles.swift in Sources */,
 			);
