@@ -4,6 +4,8 @@
 
 https://user-images.githubusercontent.com/1779614/161232308-974dcfef-7cbe-4f7f-9148-175a380db1c9.mp4
 
+> Original mockup by [Anthony Boyd Graphics](https://www.anthonyboyd.graphics)
+
 ## How it works
 
 By adding a transparent view to the upper half of a modal, you can get a half modal with all the **transitions and the pan gesture for free.** See [`ModalViewController.swift`](Half%20Modal/Views/ModalViewController.swift) for details.
